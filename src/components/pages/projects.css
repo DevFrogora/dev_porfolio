@@ -1,0 +1,135 @@
+body {
+  font-family: Arial;
+  color: black;
+}
+
+.split1 {
+  height: 100%;
+  width: 30%;
+  position: fixed;
+  top: 60px;
+  overflow-wrap: anywhere;
+  z-index: 1;
+  /* padding-top: 100px; */
+  margin: 0px;
+  border-color: #ffffff #d9d9d9 #ffffff #ffffff; 
+  border-width: 2px; /* this allows you to adjust the thickness */
+  border-style: solid;
+  z-index: 0;
+}
+.split2 {
+  height: 100%;
+  width: 70%;
+  position: fixed;
+  top: 60px;
+  overflow-x: hidden;
+  margin: 0px;
+  z-index: -1;
+}
+
+.left {
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.89);
+}
+
+.right {
+  right: 0;
+  background-color: #ecececfa;
+}
+
+.centered {
+  position: relative;
+  top: 30px;
+  left: 20px;
+  text-align:justify;
+}
+
+.contentStyle {
+  position: relative;
+  top: 20px;
+  left: 10%;
+  text-align: start;
+}
+
+.shiftLeft{
+  left:10%;
+}
+
+.centered.logoImage {
+  width: 100px;
+  border-radius: 50%;
+  padding: 40px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .split1 {
+    width: 30%;
+  }
+  .split2 {
+    width: 70%;
+  }
+  .logoImage {
+    width: 40px;
+    height: 40px;
+  }
+  .githubText{
+    font-size: large;
+  }
+  .centered {
+    position: relative;
+    top: 30px;
+    left: 5px;
+    text-align:justify;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  
+  .split1 {
+    width: 30%;
+  }
+  .split2 {
+    width: 70%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .split1 {
+    width: 30%;
+  }
+  .split2 {
+    width: 70%;
+  }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .split1 {
+    width: 25%;
+  }
+  .split2 {
+    width: 75%;
+  }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .split1 {
+    width: 20%;
+  }
+  .split2 {
+    width: 80%;
+  }
+}
+
+  @media only screen and (min-width: 1900px) {
+    .split1 {
+      width: 20%;
+    }
+    .split2 {
+      width: 80%;
+    }
+}
