@@ -1,15 +1,25 @@
 import React, { Component } from 'react'
 import HeaderForAbout from './HeaderForAbout'
+import { PersonalDataConsumer } from '../personalDataContext'
+
 class About extends Component {
     render() {
         return (
             <div>
                 <HeaderForAbout />
-                
-                <p className="about_intro">Hello! My name is Frogora and I enjoy creating things that live on the internet.
+
+                <p className="about_intro">Hello! My name is  <PersonalDataConsumer>
+                    {
+                        (JsonData) => {
+                            return <span>
+                                {JsonData.name}
+                            </span>
+                        }
+                    }
+                </PersonalDataConsumer> and I enjoy creating things that live on the internet.
                      My interest in Desktop , Android Mobile , Backend development  started  in 2017 when I decided to learn BCA </p>
                 <div className="middle_container">
-                    
+
                     <div className="skillList">
                         <div className="skillItem"> C</div>
                         <div className="skillItem"> C++</div>

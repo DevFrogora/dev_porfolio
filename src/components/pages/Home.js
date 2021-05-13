@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import "./css/home.css"
 import InlineImageText from './InlineImageText'
+import { PersonalDataConsumer } from '../personalDataContext'
+
 
 class Home extends Component {
     render() {
@@ -31,24 +33,34 @@ class Home extends Component {
                         <h1 className="heading">Hi, my name is</h1>
                     </div>
                     <div  >
-                        <h2 className="big-heading">Frogora Dev.</h2>
+                        <h2 className="big-heading">
+                            <PersonalDataConsumer>
+                                    {
+                                        (JsonData) => {
+                                            return <span>
+                                                {JsonData.name}
+                                            </span>
+                                        }
+                                    }
+                                </PersonalDataConsumer>
+                     </h2>
                     </div>
-                    <div >
-                        <h3 className="big-heading">I build things for the Desktop , Backend, Mobile , Web.</h3>
-                    </div>
-                    <div >
-                        <p className="homeStory">I'm a Band-based software engineer who specializes in building (and occasionally
-                        designing) exceptional digital experiences. Currently, I'm an engineer at
+                        <div >
+                            <h3 className="big-heading">I build things for the Desktop , Backend, Mobile , Web.</h3>
+                        </div>
+                        <div >
+                            <p className="homeStory">I'm a Band-based software engineer who specializes in building (and occasionally
+                            designing) exceptional digital experiences. Currently, I'm an engineer at
                                         <a className="link" href="https://upstatement.com/"> Upstatement </a>
                                          focused on building accessible, human-centered products.</p>
-                    </div>
-                    <div >
-                        <NavLink to="/contact">
-                            <button className="getInTouch"  >Get In Touch</button>
-                        </NavLink>
+                        </div>
+                        <div >
+                            <NavLink to="/contact">
+                                <button className="getInTouch"  >Get In Touch</button>
+                            </NavLink>
 
+                        </div>
                     </div>
-                </div>
             </>
         )
     }

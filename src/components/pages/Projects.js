@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import InlineImageText from './InlineImageText'
 import ProjectRepo from './ProjectRepo'
 import './projects.css'
+import { PersonalDataConsumer } from '../personalDataContext'
 
 class Projects extends Component {
     render() {
@@ -16,7 +17,16 @@ class Projects extends Component {
                         <img className="logoImage" src="https://media.discordapp.net/attachments/658935195403026432/836824740327850024/github_logo_icon_143772.png" alt="Avatar woman" />
                         <h2 className="githubText">Github</h2>
                         <InlineImageText imageLink={githubImageLink} text="@github" width="24px" height="24px" redirectLink="https://github.com/DevFrogora"/>
-                        <InlineImageText imageLink={mailBoxImageLink} text="FrogoraSupport@gmail.com" width="18px" height="18px"/>
+                        <PersonalDataConsumer>
+                                    {
+                                        (JsonData) => {
+                                            return <span>
+                                                <InlineImageText imageLink={mailBoxImageLink} text={JsonData.email} width="18px" height="18px"/>
+                                            </span>
+                                        }
+                                    }
+                                </PersonalDataConsumer>
+                        
                         <InlineImageText imageLink={locationImageLink} text="Guwahati Assam , India" width="18px" height="18px" />
                     </div>
                 </div>

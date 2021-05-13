@@ -43,7 +43,7 @@ class Navbar extends Component {
                             <li className={navStyle.navItem}><span >2. Experience</span></li>
                         </NavLink>
                         <NavLink exact activeStyle={activeStyle} style={linkStyle} to="/projects">
-                            <li className={navStyle.navItem} ><span >3. Work</span></li>
+                            <li className={navStyle.navItem} ><span >3. Projects</span></li>
                         </NavLink>
                         <NavLink exact activeStyle={activeStyle} style={linkStyle} to="/contact">
                             <li className={navStyle.navItem} ><span >4. Contact</span></li>

@@ -1,21 +1,24 @@
 import React, { Component } from 'react'
 import ContactMetaData from './ContactMetaData'
 import "./css/contactForm.css"
+import axios from 'axios'
 
 class Contact extends Component {
 
     constructor(props) {
         super(props)
-
+        this.child = React.createRef();
         this.state = {
             username: '',
             email: '',
             message: '',
             message_type: '',
             form_status: '',
-            form_status_message: ''
+            form_status_message: '',
         }
     }
+
+
 
     handleUsernameChange = (event) => {
         this.setState({
@@ -44,24 +47,45 @@ class Contact extends Component {
 
     handleSubmit = (event) => {
             //            && typeof (this.state.message_priority) != "undefined"
-        if (this.state.username != '' && this.state.email != ''
+        if (this.state.username !=='' && this.state.email !==''
 
-            && this.state.message != '') {
+            && this.state.message !== '' && this.state.message_type !== '') {
 
-            alert(`${this.state.username} ${this.state.email} ${this.state.message} ${this.state.message_priority}`)
-
+            alert(`${this.state.username} ${this.state.email} ${this.state.message} ${this.state.message_type}`)
+                console.log(this.state);
             this.setState(prevState => ({
-                form_status: '',
+                // form_status: '',
                 form_status: 'form_status_success',
                 form_status_message: 'send done'
 
             }))
-            event.preventDefault();
+
+            var config = {
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+            };
+
+            let data= {
+                username : this.state.username,
+                email : this.state.email,
+                message : this.state.message,
+                message_type : this.state.message_type
+                }
+            
+            console.log(data)
+            axios.post('http://localhost:8080/FirstServlet/setContactData', data, config)
+            .then(response => {
+                // console.log(response.data)
+                // console.log(this.state)
+
+            })
+            .catch(e => console.log(e))
+             event.preventDefault();
+
         } else {
             event.preventDefault();
             alert('empty');
             this.setState(prevState => ({
-                form_status: '',
+                // form_status: '',
                 form_status: 'form_status_failed',
                 form_status_message: 'send failed'
             }))
@@ -69,8 +93,14 @@ class Contact extends Component {
         }
     }
 
+    handleToRefresh = () => {
+        this.child.current.handleOnChange();
+    }
+
 
     render() {
+        console.log("Contact Parent data");
+
         return (
             <div >
                 <p className="my_message">
@@ -78,7 +108,7 @@ class Contact extends Component {
                         My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
                     </span>
                 </p>
-                <ContactMetaData />
+                <ContactMetaData   ref={this.child} />
                 <div className="form_container">
                     <form onSubmit={this.handleSubmit} > 
                         <div>
@@ -86,7 +116,7 @@ class Contact extends Component {
                                 <input
                                     placeholder="UserName"
                                     type="text"
-                                    value={this.state.useranme}
+                                    value={this.state.username}
                                     onChange={this.handleUsernameChange}
                                 />
                             </div>
@@ -121,7 +151,7 @@ class Contact extends Component {
                                 </select>
                             </div>
                         </div>
-                        <button className="submit_btn" type="submit">Submit</button>
+                        <button className="submit_btn" type="submit" onClick={this.handleToRefresh}>Submit</button>
                     </form>
                 </div>
             </div>
