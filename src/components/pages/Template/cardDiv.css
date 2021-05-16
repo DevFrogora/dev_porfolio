@@ -1,0 +1,92 @@
+.cardBlock{
+    display: inline-block;
+    max-width: 40%;
+}
+
+.card{
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 250px;
+    margin:0px;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+.img{
+    margin: 20px;
+}
+
+.row{
+    display: flex;
+}
+
+.column{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grow1{
+    flex-grow: 1;
+}
+.grow2{
+    flex-grow: 3;
+}
+
+
+.content p{
+    font-size: small;
+    color: rgb(97, 96, 96);
+}
+.content h2{
+    font-size: large;
+    color: #3e88ee;
+}
+.sizeSmallFont{
+    font-size: small;
+}
+.sizeSmallestFont{
+    font-size: 11px;
+}
+
+.lang{
+    margin : 8px;
+    padding: 0px;
+    color: rgb(243, 243, 243);
+    border-radius: 70%;
+    height: 10px;
+    width: 10px;
+}
+.java{
+    background-color: #b07219;
+}
+.cpp{
+    background-color: #f34b7d;
+}
+.html{
+    background-color: #e34c26;
+}
+.css{
+    background-color: #563d7c;
+}
+.php{
+    background-color: #4F5D95;
+}
+.csharp{
+    background-color: #178600;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+
+
+  @media only screen and (max-width: 1150px) {
+    .cardBlock{
+        display: inline-block;
+        max-width: 80%;
+    }
+  } 
+  

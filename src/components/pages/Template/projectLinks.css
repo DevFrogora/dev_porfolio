@@ -1,0 +1,50 @@
+.Projectslinks {
+    display: flex;
+    /* flex-direction: column; */
+    /* background-color: aqua; */
+    list-style: none;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+    /* justify-content:space-around; */
+    margin: 0;
+    padding: 0;
+    align-items: flex-start;
+  }
+  
+  .Projectslinks li {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: smaller;
+    list-style: none;
+    background-color: #8cacea;
+    margin: 8px;
+    border-radius: 90px;
+    padding: 8px;
+  }
+
+  .Projectslinks li a {
+    text-decoration: none;
+    color: #0e56e6;
+  }
+  
+  
+  .Projectslinks li:nth-child(2) {
+    order: 0;
+    /* Order value : 0>= value =<1 
+          default value is 0
+          order of the element from lowest to higer means 0 to 1
+          index of elemnet start from 1 not 0 
+      */
+  }
+  
+  .Projectslinks li:nth-child(1) {
+    /*give it a value higher than 0*/
+    /* Order value : 0>= value =<1 
+          default value is 0
+          order of the element from lowest to higer means 0 to 1
+          index of elemnet start from 1 not 0 
+      */
+    /* flex-grow: 1; */
+    margin-right: auto; /*applied only to the right*/
+  }
+  
