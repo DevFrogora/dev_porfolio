@@ -8,7 +8,7 @@ class HeaderForAbout extends Component {
             <div>
                 <div className="center">
                     <a href="/images/profilepic.png">
-                        <img className="username_pic" src="/images/profilepic.png" alt="FrogoraProfilePic" />
+                        <img className="username_pic" src={process.env.PUBLIC_URL +"/images/profilepic.png"} alt="FrogoraProfilePic" />
                     </a>
                     <div className="clearfix">
                         <a href="https://www.y.com/">
