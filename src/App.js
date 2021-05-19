@@ -58,7 +58,7 @@ class App extends Component {
                     <PersonalDataProvider value={this.state.PersonalDetails}>
                         <Navbar />
                         <Switch>
-                            <Route path="/" exact component={Home} />
+                            <Route path="/dev_porfolio" exact component={Home} />
                             <Route path="/about" component={About} />
                             <Route path="/experience" component={Experience} />
                             <Route path="/projects" component={Projects} />
