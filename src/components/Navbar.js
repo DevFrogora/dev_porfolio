@@ -20,7 +20,7 @@ class Navbar extends Component {
         return (
             <div>
                 <nav>
-                    <Link to="/" style={linkStyle}>
+                    <Link to="/dev_porfolio" style={linkStyle}>
                         <div className={navStyle.logo}><h1> Frogora Dev </h1></div>
                     </Link>
                     <ul className={classname}>
