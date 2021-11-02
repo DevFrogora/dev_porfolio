@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
-import "./css/home.css"
-import InlineImageText from './InlineImageText'
+import "./Home/home.css"
+import InlineImageText from './Template/InlineImageText'
 import { PersonalDataConsumer } from '../personalDataContext'
 
 
@@ -30,37 +30,38 @@ class Home extends Component {
                 <div className="homeHeadingContainer shiftRight">
 
                     <div>
-                        <h1 className="heading">Hi, my name is</h1>
+                        <h1 className="heading">Hi, my name is Ruhit Rai</h1>
                     </div>
                     <div  >
                         <h2 className="big-heading">
                             <PersonalDataConsumer>
-                                    {
-                                        (JsonData) => {
-                                            return <span>
-                                                {JsonData.name}
-                                            </span>
-                                        }
+                                {
+                                    (JsonData) => {
+                                        return <span>
+                                            {JsonData.name}
+                                        </span>
                                     }
-                                </PersonalDataConsumer>
-                     </h2>
+                                }
+                            </PersonalDataConsumer>
+                        </h2>
                     </div>
-                        <div >
-                            <h3 className="big-heading">I build things for the Desktop , Backend, Mobile , Web.</h3>
-                        </div>
-                        <div >
-                            <p className="homeStory">I'm a Band-based software engineer who specializes in building (and occasionally
-                            designing) exceptional digital experiences. Currently, I'm an engineer at
-                                        <a className="link" href="https://upstatement.com/"> Upstatement </a>
-                                         focused on building accessible, human-centered products.</p>
-                        </div>
-                        <div >
-                            <NavLink to="/contact">
-                                <button className="getInTouch"  >Get In Touch</button>
-                            </NavLink>
+                    <div >
+                        <h3 className="big-heading">I build things for the Desktop , Backend, Mobile , Web.</h3>
+                    </div>
+                    <div >
+                        <p className="homeStory">I'm a Guwahati based software engineer who likes to in build System , Mobile , Web and embedded application.
+                            Currently, I'm finding for freelance :) .
+                            {/* <a className="link" href="https://upstatement.com/"> Upstatement </a>
+                                         focused on building accessible, human-centered products. */}
+                        </p>
+                    </div>
+                    <div >
+                        <NavLink to="/contact">
+                            <button className="getInTouch"  >Get In Touch</button>
+                        </NavLink>
 
-                        </div>
                     </div>
+                </div>
             </>
         )
     }

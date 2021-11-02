@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import HeaderForAbout from './HeaderForAbout'
+import HeaderForAbout from './About/HeaderForAbout'
 import { PersonalDataConsumer } from '../personalDataContext'
 
 class About extends Component {
@@ -8,7 +8,7 @@ class About extends Component {
             <div>
                 <HeaderForAbout />
 
-                <p className="about_intro">Hello! My name is  <PersonalDataConsumer>
+                <p className="about_intro">Hello! My name is Ruhit Rai  <PersonalDataConsumer>
                     {
                         (JsonData) => {
                             return <span>

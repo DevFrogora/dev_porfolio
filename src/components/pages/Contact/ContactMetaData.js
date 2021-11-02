@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import "./css/contact.css"
+import "./contact.css"
 import axios from 'axios'
 
 
@@ -11,7 +11,7 @@ class ContactMetaData extends PureComponent {
             totalCount: 0,
             pendingCount: 0,
             falseCount: 0,
-            canContact: "yes"
+            canContact: "no"
         }
     }
 

@@ -11,7 +11,9 @@ class InlineImageText extends Component {
                     <a href={redirectLink}>
                         <img className="amazonLink__image"
                             src={imageLink} width={width} height={height} />
-                        <div className="amazonLink__text">{text}</div>
+                        <div className="amazonLink__text">{text}  
+       {this.props.children}
+    </div>
                     </a>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import RepoDivCard from './RepoDivCard'
-import CardDiv from './Template/CardDiv'
+import CardDiv from './CardDiv'
 
 /**
  * read more about json

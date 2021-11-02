@@ -12,6 +12,7 @@ import Home from "./components/pages/Home";
 import Projects from "./components/pages/Projects";
 import Experience from "./components/pages/Experience";
 import Contact from "./components/pages/Contact";
+import Resume from "./components/pages/Resume";
 import { PersonalDataProvider } from "./components/personalDataContext";
 import "./components/pages/httpRequest/ServletGetRequest"
 // import {sendRequest} from "./components/pages/httpRequest/ServletGetRequest.js";
@@ -63,6 +64,7 @@ class App extends Component {
                             <Route path="/experience" component={Experience} />
                             <Route path="/projects" component={Projects} />
                             <Route path="/contact" component={Contact} />
+                            <Route path="/resume" component={Resume} />
                             <Route path="/admin" component={Admin} />
                         </Switch>
                     </PersonalDataProvider>

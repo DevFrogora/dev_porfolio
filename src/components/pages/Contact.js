@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import ContactMetaData from './ContactMetaData'
-import "./css/contactForm.css"
+import ContactMetaData from './Contact/ContactMetaData'
+import "./Contact/contactForm.css"
 import axios from 'axios'
 
 class Contact extends Component {

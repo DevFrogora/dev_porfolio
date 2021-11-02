@@ -1,0 +1,32 @@
+ *{
+    font-family: 'Courier New', Courier, monospace;
+ }
+ 
+ .TopColumn {
+    border-right: 1px solid #000;
+    border-right-width: 3px;
+}
+.TopColumn b{
+    font-size: larger;
+    
+}
+td{
+    vertical-align: top;
+    text-align: left;
+}
+
+table { width: 100%; }
+
+.Heading:first-child td{
+    border-bottom: 4px dashed #000 ;
+}
+
+/* .Education tr:first-child td{
+    border-bottom: 4px solid #fffefe ;
+} */
+
+.resumeSection h3{
+    background-color: rgb(238, 241, 207);
+}
+
+

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import InlineImageText from './InlineImageText'
-import ProjectRepo from './ProjectRepo'
-import './projects.css'
+import InlineImageText from './Template/InlineImageText'
+import ProjectRepo from './Projects/ProjectRepo'
+import './Projects/projects.css'
 import { PersonalDataConsumer } from '../personalDataContext'
 
 class Projects extends Component {
@@ -21,7 +21,8 @@ class Projects extends Component {
                                     {
                                         (JsonData) => {
                                             return <span>
-                                                <InlineImageText imageLink={mailBoxImageLink} text={JsonData.email} width="18px" height="18px"/>
+                                                {/* <InlineImageText imageLink={mailBoxImageLink} text={JsonData.email} width="18px" height="18px"/> */}
+                                                <InlineImageText imageLink={mailBoxImageLink} text="ruhitrai1997@gmail.com" width="18px" height="18px"/>
                                             </span>
                                         }
                                     }

@@ -48,7 +48,10 @@ class Navbar extends Component {
                         <NavLink exact activeStyle={activeStyle} style={linkStyle} to="/contact">
                             <li className={navStyle.navItem} ><span >4. Contact</span></li>
                         </NavLink>
-                        <li className={navStyle.navItem}><span className={navStyle.navItem}>Resume</span></li>
+                        <NavLink exact activeStyle={activeStyle} style={linkStyle} to="/resume">
+                            <li className={navStyle.navItem} ><span >5. Resume</span></li>
+                        </NavLink>
+                        {/* <li className={navStyle.navItem}><span className={navStyle.navItem}>Resume</span></li> */}
 
                     </ul>
                 </nav>

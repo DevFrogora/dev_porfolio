@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { PersonalDataConsumer } from '../personalDataContext'
-import "./css/about.css"
+import { PersonalDataConsumer } from '../../../components/personalDataContext'
+import "./about.css"
 
 class HeaderForAbout extends Component {
     render() {
