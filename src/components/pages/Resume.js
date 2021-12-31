@@ -59,10 +59,10 @@ class Resume extends Component {
                                 </tr>
                                 <tr>
                                     <td className="TopColumn">
-                                        Technology
+                                        Tools
                                     </td>
                                     <td>
-                                        Git,Docker
+                                        Git,Docker,maven,gradle
                                     </td>
                                 </tr>
                             </table>
@@ -98,6 +98,12 @@ class Resume extends Component {
                                 </tr>
 
                             </table>
+                        </td>
+                    </tr>
+                    <tr className="resumeSection">
+                        <td colspan="2">
+                            <h3>  <b> Others Project  </b> </h3>
+                            Github profile : https://github.com/DevFrogora
                         </td>
                     </tr>
                 </table>
