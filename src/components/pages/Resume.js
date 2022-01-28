@@ -2,12 +2,40 @@ import React, { Component } from 'react'
 import './Resume/ResumeTable.css'
 class Resume extends Component {
     handleDownloadingPDF = (event) => {
+        var navElement= document.getElementsByTagName("nav");
+        document.title = ""
+        for(var i=0; i< navElement.length; i++)
+        {
+            // navElement[i].style.visibility = 'hidden';
+            navElement[i].style.display = 'none';
+        }
+        let phoneNumber = prompt("Please enter your phoneNumber", "6464464658");
+        document.getElementById("phoneNumber").innerHTML = phoneNumber;
+        document.getElementById("h1resume").style.display = "";
         window.print();
+        //reset
+        for(var i=0; i< navElement.length; i++)
+        {
+            // navElement[i].style.visibility = 'visible';
+            navElement[i].style.display = '';
+        }
+        document.title = "Portfolio"
+        document.getElementById("phoneNumber").innerHTML = "93xxxxxxxx";
+        document.getElementById("h1resume").style.display = "none";
     }
+
+
     render() {
+        const headingResumeStyle = {
+            color: "",
+            textAlign: "center",
+            // fontFamily: "Arial"
+            display : "none"
+          };
         
         return (
             <div>
+                <h1 id="h1resume" style={headingResumeStyle}> Resume</h1>
                 <table>
                     <tr className="Heading">
                         <td className="TopColumn">
@@ -16,7 +44,7 @@ class Resume extends Component {
                             Asian Institute of Management and Technology
                         </td>
                         <td>
-                            Phone - +91-93xxxxxxxx <br />
+                            Phone - +91-<span id='phoneNumber'>93xxxxxxxx</span> <br />
                             Email - ruhitrai1997@gmail.com <br />
                             Address : 51A, Narengi Tiniali , Guwahti , Assam - 781026
                         </td>
@@ -108,6 +136,7 @@ class Resume extends Component {
                     </tr>
                 </table>
             <button onClick={this.handleDownloadingPDF}>Download As PDF</button>
+            
             </div>
         )
     }
