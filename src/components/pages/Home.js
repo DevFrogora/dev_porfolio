@@ -49,7 +49,7 @@ class Home extends Component {
                         <h3 className="big-heading">I build things for the Desktop , Backend, Mobile , Web.</h3>
                     </div>
                     <div >
-                        <p className="homeStory">I'm a Guwahati based software engineer who likes to in build System , Mobile , Web and embedded application.
+                        <p className="homeStory">I'm a Guwahati based software engineer who likes to  build application for PC , Mobile , Web and embedded application.
                             Currently, I'm finding for freelance :) .
                             {/* <a className="link" href="https://upstatement.com/"> Upstatement </a>
                                          focused on building accessible, human-centered products. */}
