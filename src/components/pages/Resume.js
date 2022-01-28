@@ -74,7 +74,7 @@ class Resume extends Component {
                                         Languages
                                     </td>
                                     <td>
-                                        C,C++,Java,C#,PHP,HTML,JavaScript
+                                        C,C++,Java,C#,PHP,HTML,JavaScript,CSS
                                     </td>
                                 </tr>
                                 <tr>
@@ -90,7 +90,7 @@ class Resume extends Component {
                                         Technologies
                                     </td>
                                     <td>
-                                        MySQL,CSS,Servlet,JSP ,Unity, Opencv , Arduino
+                                        MySQL,Servlet,JSP ,Unity, Opencv , Arduino
                                     </td>
                                 </tr>
                                 <tr>
