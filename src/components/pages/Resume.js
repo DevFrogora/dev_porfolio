@@ -74,15 +74,7 @@ class Resume extends Component {
                                         Languages
                                     </td>
                                     <td>
-                                        C,C++,Java,C#
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="TopColumn">
-                                        Web
-                                    </td>
-                                    <td>
-                                        PHP,MySQL,HTML,CSS,JavaScript
+                                        C,C++,Java,C#,PHP,HTML,JavaScript
                                     </td>
                                 </tr>
                                 <tr>
@@ -90,7 +82,23 @@ class Resume extends Component {
                                         Tools
                                     </td>
                                     <td>
-                                        Git,Docker,maven,gradle
+                                        Git,Docker,maven,gradle,Blender
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="TopColumn">
+                                        Technologies
+                                    </td>
+                                    <td>
+                                        MySQL,CSS,Servlet,JSP ,Unity, Opencv , Arduino
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="TopColumn">
+                                        SDK
+                                    </td>
+                                    <td>
+                                        Android-SDK
                                     </td>
                                 </tr>
                             </table>
@@ -130,7 +138,7 @@ class Resume extends Component {
                     </tr>
                     <tr className="resumeSection">
                         <td colspan="2">
-                            <h3>  <b> Others Project  </b> </h3>
+                            <h3>  <b> Other Projects  </b> </h3>
                             Github profile : https://github.com/DevFrogora
                         </td>
                     </tr>
