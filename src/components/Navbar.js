@@ -33,6 +33,7 @@ class Navbar extends Component {
                             <NavLink  to="/experience"> <span> 2. Experience </span>    </NavLink>
                             <NavLink  to="/projects"> <span> 3. Work  </span>   </NavLink>
                             <NavLink  to="/contact"> <span> 4. Contact </span>    </NavLink>
+                            <NavLink  to="/resume"> <span> 5. Resume </span>    </NavLink>
                             </div>
                             </div>
                             </li>
