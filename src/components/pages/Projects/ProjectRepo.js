@@ -53,7 +53,7 @@ class ProjectRepo extends Component {
                     projSourceLink={json.projectlist[0].projectSourceLink}
                     projDocsLink={json.projectlist[0].projectDocsLink}
                 /> */}
-                 <h2>Non-Github Repo</h2>
+                 {/* <h2>Non-Github Repo</h2>
                 <p>..............</p>
                 {json.projectlist.map(project => {
 
@@ -68,7 +68,7 @@ class ProjectRepo extends Component {
                         />
                     )
 
-                })}
+                })} */}
                 <br/>
                 <h2> Preview of Making Game</h2>
                 <UnityPreviewTable/>
