@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import RepoDivCard from './RepoDivCard'
 import CardDiv from './CardDiv'
-
+import UnityPreviewTable from './PorjectPreview/UnityPreviewTable';
+import "../../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 /**
  * read more about json
  * https://mkyong.com/javascript/how-to-access-json-object-in-javascript/#:~:text=Below%20is%20a%20JSON%20string.&text=To%20access%20the%20JSON%20object,%E2%80%9D%20or%20%E2%80%9C%5B%5D%E2%80%9D.
@@ -30,10 +31,12 @@ var data = {
     }
     ]
 };
+
 var json = JSON.parse(JSON.stringify(data));
 class ProjectRepo extends Component {
     render() {
-        let username = "DevFrogora"
+        let username = "DevFrogora";
+       
         return (
             <div >
                 <RepoDivCard Username={username} Repo="LibraryManagementSystem" />
@@ -66,6 +69,9 @@ class ProjectRepo extends Component {
                     )
 
                 })}
+                <br/>
+                <h2> Preview of Making Game</h2>
+                <UnityPreviewTable/>
             </div>
         )
     }
